@@ -22,6 +22,7 @@ body{
 }
 button{
     font-family: inherit;
+    border:none;
 }
 
 :focus{
@@ -31,4 +32,10 @@ button{
     width: 2em;
     height: 2em;
     display: inline-block;
+}
+
+.clearfix::after{
+    content:'';
+    display: block;
+    clear:both;
 }

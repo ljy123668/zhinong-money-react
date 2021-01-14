@@ -1,10 +1,11 @@
 import styled from 'styled-components'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Icon from "./Icon";
 
 
 
 const NavWrapper = styled.nav`
+  background-color: #fff;
   line-height:24px;
   box-shadow:0 0 3px rgba(0,0,0,0.25);
   > ul{
@@ -12,18 +13,26 @@ const NavWrapper = styled.nav`
     >li{
       width:33.3333%;
       text-align:center;
-      a{
+     > a{
         display:flex;
-         flex-direction:column;
+        flex-direction:column;
         justify-content:center;
-      align-items:center;
-      padding:4px 0;
+        align-items:center;
+        padding:4px 0;
+        .icon{
+        width:24px;
+        height:24px;
+      }
+      &.selected{
+        color:red;
+        .icon{
+          fill:red;
+       
+       }
       }
     
      
-      .icon{
-        width:24px;
-        height:24px;
+     
       }
     }
   }
@@ -34,17 +43,19 @@ const Nav = () => {
     <NavWrapper>
       <ul>
         <li>
-
-          <Link to="/tags"><Icon name="tags" />标签</Link>
+          <NavLink to="/tags" activeClassName="selected" >
+            <Icon name="tags" />标签
+            </NavLink >
         </li>
         <li>
-
-          <Link to="/money"> <Icon name="money" />记账</Link>
+          <NavLink to="/money" activeClassName="selected" >
+            <Icon name="money" />记账
+            </NavLink >
         </li>
         <li>
-
-
-          <Link to="/statistics">  <Icon name="statistics" />统计</Link>
+          <NavLink to="/statistics" activeClassName="selected" >
+            <Icon name="statistics" />统计
+            </NavLink >
         </li>
       </ul>
     </NavWrapper>

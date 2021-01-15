@@ -29,8 +29,8 @@ button{
     outline:none;
 }
 .icon{
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
     display: inline-block;
 }
 
@@ -38,4 +38,10 @@ button{
     content:'';
     display: block;
     clear:both;
+}
+
+.oneLine{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const Wrapper = styled.section`
     > ul{
         display:flex;
-        background-color:#c4c4c4;
+        /* background-color:#c4c4c4; */
         > li{
             width:50%;
             text-align:center;
@@ -15,7 +15,7 @@ const Wrapper = styled.section`
                 content:'';
                 display:block;
                 height:3px;
-                border:1px solid red;
+                /* border:1px solid red; */
                 background:#333;
                 position:absolute;
                 bottom:0;
